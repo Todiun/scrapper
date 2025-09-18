@@ -1,0 +1,96 @@
+Le Scrappeur Fou
+
+Automated web scraping projects using Ruby, Nokogiri, and APIs.
+
+Overview
+
+This project teaches you how to scrape data from websites in a structured way. You will:
+
+Retrieve cryptocurrency prices from CoinMarketCap.
+
+Collect email addresses of town halls in the Val d’Oise region, France.
+
+Bonus: Scrape the names and emails of French deputies.
+
+The goal is to produce clean, structured data stored in arrays of hashes.
+
+Project Structure
+le_scrappeur_fou/
+├── lib/       # Ruby scripts for each scraper
+├── spec/      # Tests for your scrapers
+├── Gemfile
+└── README.md
+
+
+Each scraper should output data in a consistent format.
+
+Include simple puts logs during scraping so you can see the script running.
+
+Write tests to check basic functionality and data consistency.
+
+Exercises
+1. Dark Trader – Cryptocurrency Prices
+
+Source: CoinMarketCap
+
+Output format:
+
+[
+  { "BTC" => 5245.12 },
+  { "ETH" => 217.34 },
+  ...
+]
+
+
+Steps:
+
+Isolate relevant HTML elements (coin names and prices).
+
+Extract and format data into an array of hashes.
+
+Add logging to track progress.
+
+2. Mairie Christmas – Town Hall Emails
+
+Source: Val d’Oise town hall website
+
+Output format:
+
+[
+  { "Avernes" => "mairie@avernes.fr" },
+  { "AutreVille" => "email@ville.fr" },
+  ...
+]
+
+
+Steps:
+
+Write a method get_townhall_email(townhall_url) to fetch a single email.
+
+Write a method get_townhall_urls to get URLs of all town halls.
+
+Combine both to scrape all emails efficiently.Requirements
+
+Ruby 3+
+
+Gems: nokogiri, dotenv (for API keys if needed)
+
+Optional: net/http or other HTTP libraries for API requests
+
+Testing
+
+Include basic tests for:
+
+Script runs without errors
+
+Output array contains expected items (e.g., BTC, ETH)
+
+Array size is reasonable
+
+Notes
+
+Organize your code with meaningful variable names.
+
+Build your scraper in small, verifiable steps.
+
+Use puts/logs to visualize progress.
